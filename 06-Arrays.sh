@@ -29,3 +29,9 @@ echo "line number of the script:$LINENO"
 echo "script executed in seconds:$SECONDS"
 ijefhuwehfuewhf
 echo "exit code of the previous command:$?"
+
+MAHI=("kavya" "sweety" "kalpana")
+my girls are:${MAHI[@]}"
+my girls are:${MAHI[0]}"
+my girls are:${MAHI[1]}"
+my girls are:${MAHI[2]}"
