@@ -9,9 +9,8 @@ echo "PWD of the script:$PWD"
 echo "home directory of the script:$HOME"
 echo "who is running this script:$NAME"
 echo "script executed in seconds:$SECONDS"
-echo "number line:$NUMBERLINE"
-echo "random number:$RANDOMNO"
+echo "line number of the script:$LINENO"
+echo "random number:$RANDOM"
 sleep 5 &
 echo "PID of background running command just now:$!"
-wait $1
 echo "exit code of the previous command:$?"
