@@ -1,4 +1,4 @@
 #!/bin/bash
 
-MOVIES=("pushpa" "rrr" "varanasi")
-echo "movies are:${MOVIES[@]}"
+ARRAY_NAMES=("value1" "value2" "value3")
+echo "arra_names are :${ARRAY_NAMES[@]}"
