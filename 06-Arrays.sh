@@ -27,4 +27,5 @@ wait 5
 echo "random number:$RANDOM"
 echo "line number of the script:$LINENO"
 echo "script executed in seconds:$SECONDS"
+ijefhuwehfuewhf
 echo "exit code of the previous command:$?"
