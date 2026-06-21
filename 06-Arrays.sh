@@ -26,5 +26,5 @@ echo "PID of the running first command in the script:$!"
 wait 5 
 echo "random number:$RANDOM"
 echo "line number of the script:$LINENO"
-echo "script executed in seconds:$SEONDS"
+echo "script executed in seconds:$SECONDS"
 echo "exit code of the previous command:$?"
