@@ -1,4 +1,4 @@
 #!/bin/bash
 
-Movies=("rrr" "puspha" "varanasi")
+MOVIES=("rrr" "puspha" "varanasi")
 echo "movies are:${MOVIES[@]}"
