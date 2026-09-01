@@ -2,10 +2,7 @@
 
 country=india
 
-echo "country is :$country"
+echo "country:$country"
 echo "PID of the script1: $$"
 
-#sh 14-script2.sh
-
-source ./14-script2.sh
-
+sh 14-script2.sh
