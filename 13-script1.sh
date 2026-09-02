@@ -7,4 +7,4 @@ echo "PID of the script: $$"
 
 #sh 14-script2.sh
 
-source /.14-script2.sh
+source /14-script2.sh
