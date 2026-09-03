@@ -3,4 +3,4 @@
 while IFS= read -r line # IFS internal field seperator
 do
     echo "$line"
-done < 01-helloworld.sh
+done < 02-conversation.sh
