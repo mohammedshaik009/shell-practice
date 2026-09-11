@@ -3,4 +3,4 @@
 while IFS= read -r line
 do
 
-done <02-conversation.sh
+done < 02-conversation.sh
