@@ -13,3 +13,14 @@ if [ ! -d $SOURCE_DIR ]; then
     echo "ERROR: directory: $SOURCE_DIR does not exist"
     exit 1
 fi
+echo "scanning $SOURCE_DIR for log files older than 14 days"
+FILE=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+if [ -z "$FILE" ]; then
+    echo " no log files older than 14 days"
+    exit 0
+fi
+
+while IFS= read -r file
+do
+echo "file to be deleted: $FILE"
+done
