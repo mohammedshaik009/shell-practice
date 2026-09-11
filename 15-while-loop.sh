@@ -2,5 +2,5 @@
 
 while IFS= read -r line
 do 
-    echo $line
-done <02-conversation.sh
+    echo "processing line:$line"
+done <02-spl-variables.sh
