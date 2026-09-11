@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SOURCE_DIR=$1
-DAYS=$(2:-14)
+DAYS=${2:-14}
 
 if [ -z $SOURCE_DIR ]; then
     echo "ERROR:: Missing parameters"
@@ -13,9 +13,4 @@ if [ ! -d $SOUCRE_DIR ]; then
     echo "directory is :$SOURCE_DIR does not exist"
     exit 1
 fi
-echo "scanning $SOURCE_DIR for log files older than 14 days"
-FILE=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
-if [ -z $FILE ]; then
-    echo "files to be deleted:$FILE"
-    exit 0
-fi
+
