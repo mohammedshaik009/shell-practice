@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while IFS= read -r line
+while IFS= read -r file
 do 
-    echo "processing line:$line"
-done <07-spl-variables.sh
+    echo $line
+done <02-conversation.sh
