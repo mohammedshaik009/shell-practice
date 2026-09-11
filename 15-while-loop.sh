@@ -3,4 +3,4 @@
 while IFS= read -r line
 do 
     echo "processing line:$line"
-done <01-hellworld.sh
+done <02-conversation.sh
