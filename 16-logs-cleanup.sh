@@ -21,4 +21,7 @@ if [ -z "$FILE" ]; then
     exit 0
 fi
 
-
+while IFS= read -r file
+do
+    echo "files to be deleted:$FILE"
+done <<< $FILE
