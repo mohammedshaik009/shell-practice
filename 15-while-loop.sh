@@ -3,4 +3,4 @@
 while IFS= read -r line
 do 
     echo "processing line:$line"
-done <02-spl-variables.sh
+done <07-spl-variables.sh
