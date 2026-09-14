@@ -33,9 +33,9 @@ ARCHEIVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
 tar -czvf "$ARCHEIVE_FILE" $FILES
 
 if [ $? -eq 0 ]; then
-do
-    echo "Archeival is success, deleting the files"
+echo "Archeival is success, deleting the files"
     while IFS= read -r FILE
+    do
     rm -f $FILE
     echo "Delete file $FILE"
 done <<< "$FILES"
