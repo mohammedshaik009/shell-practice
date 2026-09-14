@@ -1,0 +1,40 @@
+#!/bin/bash
+
+SOURCE_DIR=$1
+DEST_DIR=$2
+DAYS={3:-14} #default to 14 days
+
+if [ -z $SOURCE_DIR ] || [ -z $DEST_DIR ]; then
+    echo "ERROR:: Either source_dir or dest_dir Missing"
+    echo "USAGE:: $0 <source_dir> <dest_dir> [14 (optional deafault to days)]"
+    exit 1
+fi
+
+if [ ! -d $SOURCE_DIR ]; then
+    echo "directory $SOURCE_DIR does not exist"
+    exit 1
+fi
+
+if [ ! -d $DEST_DIR ]; then
+    echo "directory $DEST_DIR does not exist"
+    exit 1
+fi
+
+echo "scanning for $SOURCE_DIR and $DEST_DIR for log files older than 14days"
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+
+if [ -z "$FILES" ]; then
+    echo "no log files older than 14 days found"
+    exit 0
+fi
+TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+ARCHEIVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
+
+tar -czvf "$ARCHEIVE_FILE" $FILES
+
+if [ $? -eq 0 ]; then
+    echo "Archeival is success, deleting the files"
+    while IFS= read -r FILE
+    rm -f $FILE
+    echo "Delete file $FILE"
+done <<< $FILES
