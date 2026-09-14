@@ -4,30 +4,27 @@ SOURCE_DIR=$1
 DAYS=${2:-14} #default to 14 days
 
 if [ -z $SOURCE_DIR ]; then
-    echo "ERROR::Missing parameters"
-    echo "USAGE:: $0 <source_dir> [days(optional default to 14 )]"
+    echo "ERROR:: Missing parameters"
+    echo "USAGE:: $0 <source_dir> [days(optional to 14)]"
     exit 1
 fi
 
 if [ ! -d $SOURCE_DIR ]; then
-    echo "ERROR:: directory: $SOURCE_DIR does not exist"
+    echo "directory $SOURCE_DIR does not exist"
     exit 1
 fi
 
-echo "scanning $SOURCE_DIR log files older than 14 days"
+echo "scanning directory $SOURCE_DIR for no older than 14 days log file"
+FILES=$( find $SOURCE_DIR "*.log" -name f -type -mtime +$DAYS )
 
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
 if [ -z "$FILES" ]; then
-    echo "no log files older than 14 days found"
+    echo "directory $SOURCE_DIR no older than 14 days log files found"
     exit 0
 fi
 
-while IFS= read -r FILE 
+while IFS= read -r FILE
 do
-    echo "File to be deleted: $FILE"
-    rm -rf "$FILE"
-    echo "FIle: $FILE deleted"
+    echo "files to be deleted $FILE"
+    rm -f $FILE
+    echo files $FILE deleted
 done <<< "$FILES"
-
-#< file
-#<<< variable $FILE
