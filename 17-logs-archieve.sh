@@ -37,4 +37,4 @@ if [ $? -eq 0 ]; then
     while IFS= read -r FILE
     rm -f $FILE
     echo "Delete file $FILE"
-done <<< $FILES
+done <<< "$FILES"
