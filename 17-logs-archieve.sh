@@ -39,3 +39,4 @@ echo "Archeival is success, deleting the files"
     rm -f $FILE
     echo "Delete file $FILE"
 done <<< "$FILES"
+fi
