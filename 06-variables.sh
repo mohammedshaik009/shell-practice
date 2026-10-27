@@ -1,5 +1,15 @@
 #!/bin/bash
 
-TIME_STAMP=$(date)
+# TIME_STAMP=$(date)
 
-echo "Time is: $TIME_STAMP" 
+# echo "Time is: $TIME_STAMP" 
+
+START_TIME=$(date +%s)
+
+sleep 10
+
+END_TIME=$(date +%s)
+
+TIME_STAMP=$(($END_TIME-$START_TIME))
+
+echo "script executed in $TIMESTAMP seconds"
