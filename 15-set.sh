@@ -2,4 +2,4 @@
 
 echo "hellworld !!"
 nsnvsvvzxv
-echo "contuining.."
+echo "continuing.."
