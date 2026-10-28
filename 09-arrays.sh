@@ -10,6 +10,6 @@ echo "second value:${ARRAY_NAMES}[2]"
 MOVIES=("rrr" "varanasi" "pushpa")
 
 echo "movies are:${MOVIES[@]}"
-echo "movies are:${MOVIES[0]}"
-echo "movies are:${MOVIES[1]}"
-echo "movies are:${MOVIES[2]}"
+echo "first movie:${MOVIES[0]}"
+echo "second movie:${MOVIES[1]}"
+echo "third movie:${MOVIES[2]}"
