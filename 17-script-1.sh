@@ -5,4 +5,6 @@ COUNTRY=INDIA
 echo "country is :$COUNTRY"
 echo "PID of the script-1:$$"
 
-sh 18-script-2.sh
+#sh 18-script-2.sh
+
+source ./18-script-2.sh
