@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "im living in $COUNRY"
+echo "im living in $COUNTRY"
 echo "PID of the script-2:$$"
