@@ -2,5 +2,5 @@
 
 while IFS= read -r line
 do
-echo "line is $line"
+echo "$line"
 done < 02-conversation.sh
