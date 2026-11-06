@@ -1,7 +1,6 @@
 #!/bin/bash
 
-while IFS= read -r line || [ -n "$line" ]
+while IFS= read -r line
 do
-
-echo "$line"
+echo "line is $line"
 done < 02-conversation.sh
