@@ -9,7 +9,7 @@ if [ -z $SOURCE_DIR ]; then
     exit 1
 fi
 
-if [ -d $SOURCE_DIR ]; then
+if [ ! -d $SOURCE_DIR ]; then
     echo "ERROR:: directory does not exist"
     echo "USAGE:: $0 <source_dir>"
     exit 1
