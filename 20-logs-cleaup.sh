@@ -16,7 +16,7 @@ if [ ! -d "$SOURCE_DIR" ]; then
 fi
 
 echo "scanning for $SOURCE_DIR 14 days older than log files"
-FILES=$(find $SOURCE_DIR -type f -name "*.log" -mtime +$DAYS)
+FILES=$(find "$SOURCE_DIR" -type f -name "*.log" -mtime +"$DAYS")
 
 if [ -z "$FILES" ]; then
     echo "no log files found older than 14 days"
