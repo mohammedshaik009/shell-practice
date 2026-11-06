@@ -3,4 +3,4 @@
 while IFS= read -r line
 do
 echo "$line"
-done < 01-hellworld.sh
+done < 01-helloworld.sh
