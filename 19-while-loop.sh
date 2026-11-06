@@ -1,7 +1,7 @@
 #!/bin/bash
 
-while IFS= read -r line || [ $line]
+while IFS= read -r line || [ -n "$line" ]
 do
 
-echo line is: "$line"
-done < 03-variables.sh
+echo "$line"
+done < 02-conversation.sh
