@@ -27,4 +27,4 @@ do
     echo "files to be deleted: $FILE"
     rm -rf "$FILE"
     echo "files deleted: $FILE"
-done <<< "$FILES"
+done <<<"$FILES"
