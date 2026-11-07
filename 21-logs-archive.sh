@@ -10,4 +10,16 @@ if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]; then
     exit 1
 fi
 
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "source_dir $SOURCE_DIR does not exist"
+    exit 1
+fi
+
+if [ ! -d "$DEST_DIR" ]; then
+    echo "dest_dir $DEST_DIR does not exist"
+    exit 1
+fi
+
+echo "scanning $SOURCE_DIR for log files older than 14 days"
+FILES=$(find "$SOURCE_DIR" -type f -name "*.log" -mtime +$DAYS)
 
