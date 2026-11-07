@@ -32,3 +32,8 @@ while IFS= read -r FILE
 do
     echo "$FILE"
 done <<< "$FILES"
+
+TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+ARCHIVE_FILE="$DEST_DIR/log-archive-$TIMESTAMP.tar.gz"
+
+tar -czvf $ARCHIVE_FILE $FILES
