@@ -8,7 +8,7 @@ do
     USAGE=$(echo $line | cut -d "%" -f1 | awk '{print $6}')
     PARTITION=$(echo $line | awk '{print $7}')
     if [ "$USAGE" -gt "$USAGE_THRESHOLD" ]; then
-    MESSAGE+="High disk usage on $USAGE: $PARTITION \ n"
+    MESSAGE+="High disk usage on $USAGE: $PARTITION \n"
     fi
 
 done <<< "$DISK_USAGE"
